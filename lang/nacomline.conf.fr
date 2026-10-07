@@ -1,0 +1,54 @@
+# source 09dfafa821bcc4b0
+# Configuration de Nacomline. Après une modification : 'nacomline config apply' (les
+# paramètres de la page web le font à l'enregistrement). Les lignes qui commencent par
+# '#' sont des commentaires.
+
+[general]
+# en: language of Nacomline's messages, help, menus and web page: "en", "es", "fr", "pt", "ar" (empty: this computer's)
+# es: idioma de los mensajes, la ayuda, los menús y la página web de Nacomline: "en", "es", "fr", "pt", "ar" (vacío: el de esta computadora)
+# fr: langue des messages, de l'aide, des menus et de la page web de Nacomline : "en", "es", "fr", "pt", "ar" (vide : celle de cet ordinateur)
+# pt: idioma das mensagens, da ajuda, dos menus e da página web do Nacomline: "en", "es", "fr", "pt", "ar" (vazio: o deste computador)
+# ar: لغة رسائل Nacomline ومساعدته وقوائمه وصفحة الويب: "en", "es", "fr", "pt", "ar" (فارغ: لغة هذا الحاسوب؛ الترجمة العربية آلية ولم تُراجَع بعد)
+language =
+
+[project]
+# dossier contenant input/ output/ weird/ errors/ ... ; "." = le dossier de ce fichier
+folder = .
+
+[orca]
+# installation d'ORCA (init la trouve)
+path =
+
+[computer]
+# cœurs qu'ORCA peut utiliser ; 0 = tous les cœurs physiques
+cores = 0
+# mémoire totale qu'ORCA peut utiliser (p. ex. 16GiB) ; "auto" = ce que l'ordinateur peut
+# céder
+memory = auto
+# quand les nouveaux calculs commencent (ceux en cours se terminent toujours) ; vide =
+# toujours.
+# p. ex. : mon-fri 20:00-07:00, sat-sun 00:00-24:00
+schedule =
+# ne pas prendre de nouveaux calculs sur batterie
+pause_on_battery = true
+# ne pas prendre de nouveaux calculs au-dessus de cette température du CPU (Celsius) ;
+# 0 = sans limite
+max_cpu_temperature = 0
+
+[checks]
+# La sortie d'ORCA est toujours vérifiée (les erreurs, les optimisations non convergées
+# et les géométries incohérentes vont dans weird/ ou errors/). verify = "yes" recalcule en
+# plus une partie de certains résultats (énergie SCF, gradient, hessienne) sur ce même
+# ordinateur : inutile ici contre la triche, mais cela peut révéler une machine
+# défaillante (mémoire défectueuse, surchauffe) qui modifie un résultat sans qu'ORCA s'en
+# aperçoive. Cela coûte un peu de temps de calcul en plus.
+verify = no
+
+[alerts]
+# programme lancé pour chaque alerte (événement, message), p. ex. un script Telegram ;
+# vide = aucun
+command =
+
+[log]
+# "debug", "info", "warn" ou "error"
+level = info

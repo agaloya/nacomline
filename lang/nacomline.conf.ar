@@ -1,0 +1,50 @@
+# source 09dfafa821bcc4b0
+# ترجمة آلية لم تُراجَع بعد (machine translation, not yet reviewed)
+# إعدادات Nacomline. بعد أي تغيير: 'nacomline config apply' (إعدادات صفحة الويب تفعل
+# ذلك عند الحفظ). الأسطر التي تبدأ بـ '#' تعليقات.
+
+[general]
+# en: language of Nacomline's messages, help, menus and web page: "en", "es", "fr", "pt", "ar" (empty: this computer's)
+# es: idioma de los mensajes, la ayuda, los menús y la página web de Nacomline: "en", "es", "fr", "pt", "ar" (vacío: el de esta computadora)
+# fr: langue des messages, de l'aide, des menus et de la page web de Nacomline : "en", "es", "fr", "pt", "ar" (vide : celle de cet ordinateur)
+# pt: idioma das mensagens, da ajuda, dos menus e da página web do Nacomline: "en", "es", "fr", "pt", "ar" (vazio: o deste computador)
+# ar: لغة رسائل Nacomline ومساعدته وقوائمه وصفحة الويب: "en", "es", "fr", "pt", "ar" (فارغ: لغة هذا الحاسوب؛ الترجمة العربية آلية ولم تُراجَع بعد)
+language =
+
+[project]
+# مجلد فيه input/ output/ weird/ errors/ ...؛ "." = مجلد هذا الملف
+folder = .
+
+[orca]
+# تثبيت ORCA (يعثر عليه init)
+path =
+
+[computer]
+# الأنوية التي يمكن أن يستخدمها ORCA؛ 0 = كل الأنوية الفعلية
+cores = 0
+# مجموع الذاكرة التي يمكن أن يستخدمها ORCA (مثلًا 16GiB)؛ "auto" = ما يستطيع الحاسوب
+# الاستغناء عنه
+memory = auto
+# متى تبدأ الحسابات الجديدة (الجارية تكتمل دائمًا)؛ فارغ = دائمًا.
+# مثلًا: mon-fri 20:00-07:00, sat-sun 00:00-24:00
+schedule =
+# عدم أخذ حسابات جديدة أثناء العمل على البطارية
+pause_on_battery = true
+# عدم أخذ حسابات جديدة فوق درجة حرارة المعالج هذه (Celsius)؛ 0 = بلا حد
+max_cpu_temperature = 0
+
+[checks]
+# تُفحص مخرجات ORCA دائمًا (الأخطاء، والتحسينات الهندسية التي لم تتقارب، والهندسات غير
+# المتسقة تذهب إلى weird/ أو errors/). القيمة verify = "yes" تعيد أيضًا حساب بعض النتائج
+# جزئيًا (طاقة SCF، والتدرج، ومصفوفة Hessian) على هذا الحاسوب نفسه: لا فائدة منها هنا
+# ضد الغش، لكنها قد تكشف جهازًا معطوبًا (ذاكرة تالفة، أو ارتفاع حرارة) يغيّر نتيجةً
+# دون أن يلاحظ ORCA. تكلّف بعض وقت الحساب الإضافي.
+verify = no
+
+[alerts]
+# برنامج يُشغَّل مع كل تنبيه (الحدث، الرسالة)، مثلًا سكربت Telegram؛ فارغ = لا شيء
+command =
+
+[log]
+# "debug" أو "info" أو "warn" أو "error"
+level = info

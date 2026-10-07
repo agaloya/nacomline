@@ -1,0 +1,53 @@
+# source 09dfafa821bcc4b0
+# Configuração do Nacomline. Depois de uma mudança: 'nacomline config apply' (as
+# configurações da página web fazem isso ao salvar). As linhas que começam com '#' são
+# comentários.
+
+[general]
+# en: language of Nacomline's messages, help, menus and web page: "en", "es", "fr", "pt", "ar" (empty: this computer's)
+# es: idioma de los mensajes, la ayuda, los menús y la página web de Nacomline: "en", "es", "fr", "pt", "ar" (vacío: el de esta computadora)
+# fr: langue des messages, de l'aide, des menus et de la page web de Nacomline : "en", "es", "fr", "pt", "ar" (vide : celle de cet ordinateur)
+# pt: idioma das mensagens, da ajuda, dos menus e da página web do Nacomline: "en", "es", "fr", "pt", "ar" (vazio: o deste computador)
+# ar: لغة رسائل Nacomline ومساعدته وقوائمه وصفحة الويب: "en", "es", "fr", "pt", "ar" (فارغ: لغة هذا الحاسوب؛ الترجمة العربية آلية ولم تُراجَع بعد)
+language =
+
+[project]
+# pasta com input/ output/ weird/ errors/ ...; "." = a pasta deste arquivo
+folder = .
+
+[orca]
+# instalação do ORCA (o init a encontra)
+path =
+
+[computer]
+# núcleos que o ORCA pode usar; 0 = todos os núcleos físicos
+cores = 0
+# memória total que o ORCA pode usar (p. ex. 16GiB); "auto" = o que o computador pode
+# ceder
+memory = auto
+# quando começam os cálculos novos (os que estão rodando sempre terminam); vazio =
+# sempre.
+# p. ex.: mon-fri 20:00-07:00, sat-sun 00:00-24:00
+schedule =
+# não pegar cálculos novos enquanto estiver na bateria
+pause_on_battery = true
+# não pegar cálculos novos acima desta temperatura da CPU (Celsius); 0 = sem limite
+max_cpu_temperature = 0
+
+[checks]
+# A saída do ORCA é sempre verificada (erros, otimizações que não convergem e
+# geometrias inconsistentes vão para weird/ ou errors/). verify = "yes" também recalcula
+# em parte alguns resultados (energia SCF, gradiente, hessiana) neste mesmo computador:
+# aqui não serve contra trapaça, mas pode revelar uma máquina com defeito (memória ruim,
+# superaquecimento) que muda um resultado sem que o ORCA perceba. Custa algum tempo de
+# cálculo extra.
+verify = no
+
+[alerts]
+# programa executado a cada alerta (evento, mensagem), p. ex. um script de Telegram;
+# vazio = nenhum
+command =
+
+[log]
+# "debug", "info", "warn" ou "error"
+level = info
