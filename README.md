@@ -1,5 +1,7 @@
 # Nacomline
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23225202.svg)](https://doi.org/10.5281/zenodo.23225202)
+
 A manager for ORCA quantum-chemistry jobs on **one computer**: drop inputs in a folder and
 it runs them in the background while you work or sleep. It respects your schedule, battery
 and CPU temperature, resumes after power cuts, and sorts results into folders. Outputs that
